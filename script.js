@@ -11,4 +11,11 @@ function togglemenu(){
 
 }
 
+// ---initializing calendar
+$(document).ready(function(){
+    $('#calendar').evoCalendar({
+        settingName: settingValue
+    })
+})
+  
 
