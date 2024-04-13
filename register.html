@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,6 +20,38 @@
                 </ul>
             </nav>
             <img src="media/menu.jpg" class="menu-icon" onclick="togglemenu()">
+        </div>
+        <div class="login-register">
+            <form action="#" class="login-form">
+                <h1 class="login-title">Registration</h1>
+        
+                <div class="input-box">
+                    <i class='bx bxs-user'></i>
+                    <input type="text" placeholder="Username">
+                </div>
+                <div class="input-box">
+                    <i class='bx bxs-lock-alt'></i>
+                    <input type="password" placeholder="Create password">
+                </div>
+                <div class="input-box">
+                    <i class='bx bxs-lock-alt'></i>
+                    <input type="password" placeholder=" Confirm Password">
+                </div>
+        
+                <div class="remember-forgot-box">
+                    <label for="remember">
+                        <input type="checkbox" id="remember">
+                        Remember me
+                    </label>
+                </div>
+        
+                <button class="login-btn">Register</button>
+        
+                <p class="register">
+                    Already have an account
+                    <a href="./login.html">Login</a>
+                </p>
+            </form>
         </div>
     </div>
 
