@@ -9,11 +9,14 @@ function togglemenu(){
         menuList.style.maxHeight ="0px";
     }
 
+
 }
 
 // ---initializing calendar
 $(document).ready(function(){
     $('#calendar').evoCalendar({
+
+        // theme: "Midnight Blue",
         calendarEvents: [{
             id: 'event1' ,  //required
             name: "New year", //required
