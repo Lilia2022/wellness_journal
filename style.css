@@ -189,7 +189,7 @@ nav ul li a:hover{
 }
  .about h2 {
     margin: 0.4em;
-    font-size: 54px;
+    font-size: 60px;
     color: var(--text-color);
  }
  
@@ -207,7 +207,7 @@ nav ul li a:hover{
     flex-direction: column;
  }
  .about .content p span {
-    font-size: 34px;
+    font-size: 45px;
     color: var(--life-color);
  }
  .about img{
