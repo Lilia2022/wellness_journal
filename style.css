@@ -9,12 +9,7 @@
 }
 
 :root {
-    /* font-size */
-    --largest-font: 120px;
-    --larger-font: 70px;
-    --large-font: 34px;
-    --text-large-font: 22px;
-    --text-font: 16px;
+    
     /* color */
     --text-color: #000;
     --life-color: #aa9eee;
@@ -88,18 +83,18 @@ nav ul li a:hover{
     color: var(--text-color);
 }
 .col1 h2 {
-    font-size: 40px;
+    font-size: 50px;
 }
 .col1 h2 span{
     color: var(--life-color);
 } 
 .col1 h3 { 
-    font-size: 30px;
+    font-size: 35px;
 }
 
 .col1 p {
     margin-top: 5px;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 600;
 }
 
@@ -199,12 +194,13 @@ nav ul li a:hover{
     display: flex;
     width: 75%;
     flex-direction: row;
-    margin: 50px;
+    margin: 60px;
  }
  .about .content p{
     text-align: left;
     display: flex;
     flex-direction: column;
+    font-size: 20px;
  }
  .about .content p span {
     font-size: 45px;
