@@ -42,7 +42,7 @@
 
 .logo
 {
-    max-width: 50px;
+    max-width: 100px;
     cursor: pointer;
     margin: 30px ;
     border-radius: 50%;
@@ -92,7 +92,7 @@ nav ul li a:hover{
     font-size: 54px;
 }
 .col1 h2 span{
-    color: #9a52c1;
+    color: #f0eff1;
 } 
 .col1 h3 { 
     font-size: 40px;
@@ -108,7 +108,7 @@ nav ul li a:hover{
     content: '';
     width: 10px;
     height: 95%;
-    background: linear-gradient(#aa9eeeb3 , #000);
+    background: linear-gradient(#aa9eeeb3 , #332c2c);
     position: absolute;
     left: -40px;
     top: 8px ;
