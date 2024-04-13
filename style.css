@@ -17,8 +17,7 @@
     --text-font: 16px;
     /* color */
     --text-color: #000;
-    --hover-color: #886e6e;
-    --life-color: #aa9eeeb3;
+    --life-color: #aa9eee;
     --bg-color: #CABDBD;
     
 }
@@ -27,7 +26,7 @@
     width:100%;
     min-height: 100vh;
     padding-left:8% ; 
-    padding-right: 3%; 
+    padding-right:8%; 
     box-sizing: border-box;
     overflow: hidden;
     background: var(--bg-color);
@@ -42,7 +41,7 @@
 
 .logo
 {
-    max-width: 100px;
+    max-width: 80px;
     cursor: pointer;
     margin: 30px ;
     border-radius: 50%;
@@ -63,7 +62,7 @@ nav {
 nav ul li{
     list-style: none;
     display: inline-block;
-    margin-right: 30px;
+    margin-right: 40px;
 }
 nav ul li a{
     text-decoration: none;
@@ -72,7 +71,7 @@ nav ul li a{
     font-weight: 540;
 }
 nav ul li a:hover{
-    color: var(--hover-color);
+    color: var(--life-color);
 }
 
 /* ---row----- */
@@ -83,19 +82,19 @@ nav ul li a:hover{
     margin: 100px 0;
 }
 .col1{
-    flex-basis: 40%;
+    flex-basis: 60%;
     position: relative;
-    margin-left: 50px;
-    color: var(--life-color);
+    margin-left: 60px;
+    color: var(--text-color);
 }
 .col1 h2 {
-    font-size: 54px;
+    font-size: 40px;
 }
 .col1 h2 span{
-    color: #f0eff1;
+    color: var(--life-color);
 } 
 .col1 h3 { 
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .col1 p {
@@ -108,14 +107,14 @@ nav ul li a:hover{
     content: '';
     width: 10px;
     height: 95%;
-    background: linear-gradient(#aa9eeeb3 , #332c2c);
+    background: linear-gradient(#aa9eeed8 , #332c2c);
     position: absolute;
     left: -40px;
     top: 8px ;
 }
 .col2{
     position: relative;
-    flex-basis: 60%;
+    flex-basis: 40%;
     display: flex;
     flex-direction: row;
     align-items: left;
@@ -123,3 +122,101 @@ nav ul li a:hover{
 .col2 .bg{
     width: 80%;
 }
+/* 
+@media only screen and (max-width:860px){
+    nav ul {
+        width: 100%;
+        background: linear-gradient(#5fc47b , #095000); 
+        position: absolute;
+        top: 75px;
+        right: 0;
+        z-index: 2;
+    }
+    nav ul li{
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        color: #fff;
+    }
+    .menu-icon {
+        display:block ;
+    }
+    #menuList{
+        overflow: hidden;
+        transition:0.5s;
+    }
+    .row{
+        flex-direction: column-reverse;
+        margin: 50px 0 ;
+    }
+    .col1{
+        flex-basis: 100%;
+        margin-left: 10px;
+        width: 80%;
+    }
+    .col1 h2{
+        font-size: 35px;
+    }
+    .col1 h3{
+        font-size: 20px;
+    }
+    .col1 {
+        font-size: 10px;
+    }
+    .col2{
+        flex-basis: 100%;
+        margin-bottom: 50px;
+    }
+    .col2 .bg{
+        width: 77%;
+
+    }
+} */
+
+/* ----------ABOUT-------------- */
+.about {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    background: var(--bg-color);
+}
+ .about h2 {
+    margin: 0.4em;
+    font-size: 54px;
+    color: var(--text-color);
+ }
+ 
+ .about .content {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 75%;
+    flex-direction: row;
+    margin: 50px;
+ }
+ .about .content p{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+ }
+ .about .content p span {
+    font-size: 34px;
+    color: var(--life-color);
+ }
+ .about img{
+    width: 25em;
+    margin: 1.3em 2em;
+ }
+ #act {
+    border-radius: 30% 70% 65% 35% / 43% 39% 61% 57%;
+ }
+ #action {
+    border-radius: 30% 70% 65% 35% / 43% 39% 61% 57%;
+ }
