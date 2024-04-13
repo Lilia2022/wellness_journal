@@ -218,7 +218,7 @@ nav ul li a:hover{
  }
 
 
- /* ----------------Login /register----------- */
+ /* ----------------Login /register/logout----------- */
  .login-register{
     display: flex;
     justify-content: center;
@@ -353,13 +353,11 @@ nav ul li a:hover{
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s;
+    text-decoration: none;
 }
 .logout-btn a{
     text-decoration: none;
     color: #fff;
-}
-.logout-btn:hover {
-    background: #fff;   
 }
 
 .logout-btn a:hover {
