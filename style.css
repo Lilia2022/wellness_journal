@@ -24,7 +24,7 @@
     padding-right:8%; 
     box-sizing: border-box;
     overflow: hidden;
-    background: var(--bg-color);
+    background: var(--bg-color);   
 }
 
 .navbar{
@@ -192,7 +192,7 @@ nav ul li a:hover{
     justify-content: center;
     align-items: center;
     display: flex;
-    width: 75%;
+    width: 80%;
     flex-direction: row;
     margin: 60px;
  }
