@@ -17,7 +17,10 @@ function togglemenu(){
 
 const addBox = document.querySelector(".add-box"),
 popupBox = document.querySelector(".popup-box"),
-closeIcon = popupBox.querySelector("header i");
+closeIcon = popupBox.querySelector("header i"),
+titleTag = popupBox.querySelector(".row_journal input"),
+descripTag = popupBox.querySelector(".row_journal textarea "),
+addBtn = popupBox.querySelector("#addBtn");
 
 
 addBox.addEventListener("click", ()=>{
@@ -28,4 +31,8 @@ closeIcon.addEventListener("click", ()=>{
   popupBox.classList.remove("show");
 });
 
+addBtn.addEventListener("click", e=>{
+  e.preventDefault();
+  console.log("Button clicked");
+});
 
