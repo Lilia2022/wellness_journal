@@ -19,9 +19,7 @@
 
 .container{
     width:100%;
-    min-height: 100vh;
-    padding-left:8% ; 
-    padding-right:8%; 
+    min-height: 100vh; 
     box-sizing: border-box;
     overflow: hidden;
     background: var(--bg-color);   
@@ -29,6 +27,8 @@
 
 .navbar{
     width: 100%;
+    padding-left:8% ; 
+    padding-right:8%;
     display: flex;
     align-items: center;
     background:var(--bg-color);
@@ -71,6 +71,8 @@ nav ul li a:hover{
 
 /* ---row----- */
 .row{
+    padding-left:8% ; 
+    padding-right:8%;
     display:flex ;
     justify-content: space-between;
     align-items: center;
@@ -375,16 +377,16 @@ nav ul li a:hover{
 
 
 /* ------------------calendar--------------- */
-.cal-container {
+.cal_container{
+    width: 100%;
     min-height: 100vh;
-    width: auto;
-    height: auto ;
+    /* height: 100%; */
     background: var(--bg-color);
     position: relative;
 }
 
 #calendar {
-    width: 80%;
+    width: 90%;
     position: absolute;
     top: 50%;
     left: 50%;
