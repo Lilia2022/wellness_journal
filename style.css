@@ -474,15 +474,15 @@ nav ul li a:hover{
 }
 
 .bottom-content span {
-   
-    font-size: 12px;
+    color: #5e5656;
+    font-size: 14px;
 }
 
 .bottom-content .settings i{
     font-size: 15px;
     cursor: pointer;
 }
-
+/* settings popup */
 .settings {
     position: relative;
 }
