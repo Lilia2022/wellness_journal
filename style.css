@@ -445,6 +445,10 @@ nav ul li a:hover{
     justify-content: space-between;
     gap: 15px;
 }
+.diary .details{
+    max-height: 165px;
+    overflow-y: auto;
+}
 .diary p{
     font-size: 18px;
     font-weight: 500;
@@ -499,12 +503,12 @@ nav ul li a:hover{
     transition: transform 0.2s ease;
 }
 
-.settings:hover .menu_set {
+.settings.show .menu_set {
     transform: scale(1);
 }
 .settings .menu_set li{
     height: 5px;
-    font-size: 14px;
+    font-size: 15px;
     cursor: pointer;
     padding: 17px 15px;
     border-radius: 0;
@@ -526,7 +530,7 @@ nav ul li a:hover{
     height: 100%;
     width: 100%;
     z-index: 2;
-    /* background: #c5baba; */
+    
 }
 
 .popup-box .popup {
