@@ -42,16 +42,11 @@ function showJournals(){
     let liTag = `
           <li class="diary">
             <div class="details">
-                <p>Title of your journal</p>
-                <span>Lorem, ipsum dolor sit amet consectetur 
-                    adipisicing elit. Dolore, est. Iste nemo 
-                    quidem earum quam error tempora iure, ipsam 
-                    vitae magnam, distinctio voluptas nesciunt 
-                    officia provident, delectus eum velit ipsa!
-                </span>
+                <p>${journal.title}</p>
+                <span>${journal.description}</span>
                 <div class="bottom-content">
                     
-                  <span>April 14, 2024</span>
+                  <span>${journal.date}</span>
                   <div class="settings">
                       <i class="uil uil-ellipsis-h"></i>
                       <ul class="menu_set">
@@ -80,7 +75,8 @@ addBtn.addEventListener("click", e=>{
     // console.log(record);
 
     let journalInfo = {
-      title: journalTitle , descripTag: journalDesc,
+      title: journalTitle , 
+      description: journalDesc,
       date: `${month} ${day}, ${year}`
     }
     // console.log(month, day, year);
