@@ -617,11 +617,31 @@ nav ul li a:hover{
 
 
 /* ------MOOD------- */
+.mood-title{
+    display: flex;
+    max-width: 700px;
+    margin-left: 16%;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;   
+}
+.mood-title h1{
+    color: var(--life-color);
+    margin-bottom: 12px;
+}
+
+
+.mood-title .use {
+    font-size: 14px;
+    padding: 10px;
+    color: var(--text-color);
+}
 
 .container_mood{
     max-width: 700px;
     margin-left: 8%;
-    padding: 8%;
+    padding-left: 8%;
+    padding-top: 20px;
     display: flex;
     gap: 25px;
     align-items: center;
@@ -637,6 +657,7 @@ nav ul li a:hover{
     display: flex;
     align-items: center;
     flex-direction: column;
+    box-shadow: 5px 10px #aa9eee;
 }
 .wrapper_emoji .mood{
     /* height: 12px; */
@@ -703,14 +724,14 @@ nav ul li a:hover{
 .slider .progress-bar{
     height: 100%;
     width: 0%;
-    background: linear-gradient(45deg, #FD8D58, #DC611E);
+    background: linear-gradient(45deg, #000, #aa9eee);
     border-radius: 50px;
 }
 
 .slider .thumb{
     height: 25px;
     width: 25px;
-    background: #DC611E;
+    background: var(--life-color);
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -726,7 +747,34 @@ nav ul li a:hover{
     display: block;
     height: 100%;
     width: 100%;
-    background: linear-gradient( #FD8D58, #DC611E); 
+    background: linear-gradient( #000, #aa9eee); 
     border: 2px solid #f6f6f6;
     border-radius: 50%;
+}
+
+.mood-record{
+    display: flex;
+    /* max-width: 100px; */
+    margin-left: 55%;
+    padding: 4%;
+    padding-top: 40px;
+    align-items: right;
+}
+
+.mood-record button{
+    background: var(--life-color);
+    padding: 10px;
+    margin: 10px;
+    color: var(--text-color);
+    border: 2px solid #988ae9;
+    border-radius: 7px;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.mood-record button:hover {
+    color: var(--text-color);
+    background: var(--bg-color);
+
 }
