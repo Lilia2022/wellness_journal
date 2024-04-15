@@ -23,8 +23,100 @@
             </nav>
             <img src="media/menu.jpg" class="menu-icon" onclick="togglemenu()">
         </div>
+
+        <div class="container_mood">
+            <!-- anxiety -->
+            <div class="wrapper_emoji">
+                <div class="anxiety">
+                    <p>Anxiety</p>
+                </div>
+                <div class="section">
+                    <div class="emojis">   <!-------emoji for each section-->
+                        <!-- <li class="slide-icon"><img src="media/emoji-0.png" alt="sad"></li> -->
+                        <li class="slide-icon"><img src="media/emoji-1.png" alt="angry"></li>
+                        <li class="slide-icon"><img src="media/emoji-2.png" alt="boring"></li>
+                        <li class="slide-icon"><img src="media/emoji-3.png" alt="soso"></li>
+                        <li class="slide-icon"><img src="media/emoji-4.png" alt="happy"></li>
+                        <li class="slide-icon"><img src="media/emoji-5.png" alt="very happy"></li>
+                    </div>
+                </div>
+
+                <div class="slider">
+                    <div class="thumb"><span></span></div>
+                    <div class="progress-bar"></div>
+                    <input id="scale_input" type="range" min="0" max="100" value="0" >
+                </div>
+            </div>
+
+                    <!-- mood -->
+            <div class="wrapper_emoji">
+                <div class="mood">
+                    <p>Feeling</p>
+                </div>
+                <div class="section">
+                    <div class="emojis">   <!-------emoji for each section-->
+                        <!-- <li class="slide-icon"><img src="media/emoji-0.png" alt="sad"></li> -->
+                        <li class="slide-icon"><img src="media/mood/emoji-1.png" alt="angry"></li>
+                        <li class="slide-icon"><img src="media/mood/emoji-2.png" alt="boring"></li>
+                        <li class="slide-icon"><img src="media/mood/emoji-3.png" alt="soso"></li>
+                        <li class="slide-icon"><img src="media/mood/emoji-4.png" alt="happy"></li>
+                        <li class="slide-icon"><img src="media/mood/emoji-5.png" alt="very happy"></li>
+                    </div>
+                </div>
+            
+                <div class="slider">
+                    <div class="thumb"><span></span></div>
+                    <div class="progress-bar"></div>
+                    <input id="scale_input" type="range" min="0" max="100" value="0" >
+                </div>
+            </div>
+
+            <!-- power-->
+            <div class="wrapper_emoji">
+                <div class="mood">
+                    <p>Power</p>
+                </div>
+                <div class="section">
+                    <div class="emojis">   <!-------emoji for each section-->
+                        <!-- <li class="slide-icon"><img src="media/emoji-0.png" alt="sad"></li> -->
+                        <li class="slide-icon"><img src="media/emoji-1.png" alt="angry"></li>
+                        <li class="slide-icon"><img src="media/emoji-2.png" alt="boring"></li>
+                        <li class="slide-icon"><img src="media/emoji-3.png" alt="soso"></li>
+                        <li class="slide-icon"><img src="media/emoji-4.png" alt="happy"></li>
+                        <li class="slide-icon"><img src="media/emoji-5.png" alt="very happy"></li>
+                    </div>
+                </div>
+                            
+                <div class="slider">
+                    <div class="thumb"><span></span></div>
+                    <div class="progress-bar"></div>
+                    <input id="scale_input" type="range" min="0" max="100" value="0" >
+                </div>
+            </div>
+
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        const wrappers = document.querySelectorAll(".wrapper_emoji");
+
+        wrappers.forEach((wrapper, index) => {
+            const slider = wrapper.querySelector("#scale_input");
+            const bar = wrapper.querySelector(".progress-bar");
+            const thumb = wrapper.querySelector(".thumb");
+            const slideIcon = wrapper.querySelector(".emojis");
+
+            slider.oninput = () => {
+                let val = slider.value;
+                thumb.style.left = val + '%';
+                bar.style.width = val + '%';
+
+                slideIcon.style.marginTop = `-${150 * Math.floor(val / 20)}px`;
+            };
+        });
+
+
+    </script>
+   
 </body>
 </html>
