@@ -13,7 +13,7 @@
             <nav>
                 <ul id="menuList">
                     <li><a href="./index.html">Home</a></li>
-                    <!-- <li><a href="./calendar.html">Calendar</a></li> -->
+                    <li><a href="./calendar.html">Calendar</a></li>
                     <li><a href="./journal.html">Journal</a></li>
                     <li><a href="#">Mood</a></li>
                     <li><a href="./settings.html">Settings</a></li>
@@ -107,6 +107,34 @@
         </div>
     </div>
 
+    <!-- <script>
+        const wrappers = document.querySelectorAll(".wrapper_emoji");
+
+        wrappers.forEach((wrapper, index) => {
+            const slider = wrapper.querySelector("#scale_input");
+            const bar = wrapper.querySelector(".progress-bar");
+            const thumb = wrapper.querySelector(".thumb");
+            const slideIcon = wrapper.querySelector(".emojis");
+
+
+        // Inside the slider.oninput event listener
+                slider.oninput = () => {
+                    let val = slider.value;
+                    thumb.style.left = val + '%';
+                    bar.style.width = val + '%';
+                    slideIcon.style.marginTop = `-${150 * Math.floor(val / 20)}px`;
+
+                    // Store selected mood in localStorage
+                    localStorage.setItem('mood', val);
+                };
+            });
+
+
+
+    </script>
+    -->
+
+
     <script>
         const wrappers = document.querySelectorAll(".wrapper_emoji");
 
@@ -116,17 +144,66 @@
             const thumb = wrapper.querySelector(".thumb");
             const slideIcon = wrapper.querySelector(".emojis");
 
+            // Inside the slider.oninput event listener
             slider.oninput = () => {
                 let val = slider.value;
                 thumb.style.left = val + '%';
                 bar.style.width = val + '%';
-
                 slideIcon.style.marginTop = `-${150 * Math.floor(val / 20)}px`;
+
+                let anxietyDescription = '';
+                let feelingDescription = '';
+                let powerDescription = '';
+
+                // Determine anxiety description based on the selected emoji
+                if (val < 20) {
+                    anxietyDescription = "You are very anxious.";
+                } else if (val < 40) {
+                    anxietyDescription = "You are bored.";
+                } else if (val < 60) {
+                    anxietyDescription = "You are a little bit calm.";
+                } else if (val < 80) {
+                    anxietyDescription = "You are cool.";
+                } else {
+                    anxietyDescription = "You are peaceful.";
+                }
+
+                // Determine feeling description based on the selected emoji
+                // Modify the conditions according to your emoji scale
+                if (val < 20) {
+                    feelingDescription = "You are angry.";
+                } else if (val < 40) {
+                    feelingDescription = "You are feeling upset.";
+                } else if (val < 60) {
+                    feelingDescription = "Not bad feeling.";
+                } else if (val < 80) {
+                    feelingDescription = "You are OK.";
+                } else {
+                    feelingDescription = "You are so lovely today.";
+                }
+
+                // Determine power description based on the selected emoji
+                // Modify the conditions according to your emoji scale
+                if (val < 20) {
+                    powerDescription = "You are yawning.";
+                } else if (val < 40) {
+                    powerDescription = "You are weak.";
+                } else if (val < 60) {
+                    powerDescription = "You are tired.";
+                } else if (val < 80) {
+                    powerDescription = "You are strong.";
+                } else {
+                    powerDescription = "You are powerful.";
+                }
+
+                // Store selected mood descriptions in localStorage
+                localStorage.setItem('anxietyDescription', anxietyDescription);
+                localStorage.setItem('feelingDescription', feelingDescription);
+                localStorage.setItem('powerDescription', powerDescription);
+            
             };
         });
 
-
     </script>
-   
 </body>
 </html>

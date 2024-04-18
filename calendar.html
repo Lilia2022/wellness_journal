@@ -32,9 +32,9 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
     <script src="evo-calendar.min.js"></script>
-    <script>
+    <!-- <script>
     // Initialize evo-calendar 
-    $(document).ready(function() {
+    $(document).ready(function() { 
         $('#calendar').evoCalendar({
             // settingName: settingValue
             calendarEvents: [
@@ -60,6 +60,75 @@
 
 
 
-    </script>
+    </script> -->
+
+    <!-- <script>
+        $(document).ready(function() {
+            // Retrieve mood data from localStorage
+            const mood = localStorage.getItem('mood');
+        
+            // Check if mood data exists
+            if (mood) {
+                $('#calendar').evoCalendar({
+                    calendarEvents: [
+                        {
+                            id: 'MoodEvent',
+                            name: "Mood Recorded",
+                            date: new Date(), // Use current date
+                            type: "mood",
+                            description: `Mood recorded: ${mood}`,
+                            color: "#ffcc00"
+                        }
+                    ]
+                });
+            } else {
+                $('#calendar').evoCalendar(); // Initialize calendar without events
+            }
+        });
+        
+    </script> -->
+
+    <script>
+        $(document).ready(function() {
+            // Retrieve mood descriptions from localStorage
+            const anxietyDescription = localStorage.getItem('anxietyDescription');
+            const feelingDescription = localStorage.getItem('feelingDescription');
+            const powerDescription = localStorage.getItem('powerDescription');
+        
+            // Check if mood descriptions exist
+            if (anxietyDescription && feelingDescription && powerDescription) {
+                $('#calendar').evoCalendar({
+                    calendarEvents: [
+                        {
+                            id: 'AnxietyEvent',
+                            name: "Anxiety Recorded",
+                            date: new Date(), // Use current date
+                            type: "anxiety",
+                            description: anxietyDescription,
+                            color: "#ff0000"
+                        },
+                        {
+                            id: 'FeelingEvent',
+                            name: "Feeling Recorded",
+                            date: new Date(), // Use current date
+                            type: "feeling",
+                            description: feelingDescription,
+                            color: "#00ff00"
+                        },
+                        {
+                            id: 'PowerEvent',
+                            name: "Power Recorded",
+                            date: new Date(), // Use current date
+                            type: "power",
+                            description: powerDescription,
+                            color: "#0000ff"
+                        }
+                    ]
+                });
+            } else {
+                $('#calendar').evoCalendar(); // Initialize calendar without events
+            }
+        });
+    </script>   
 </body>
 </html>
