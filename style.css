@@ -26,7 +26,7 @@
 }
 
 .navbar{
-    width: 90%;
+    /* width: 90%; */
     padding-left:8% ; 
     padding-right:8%;
     display: flex;
@@ -777,4 +777,123 @@ nav ul li a:hover{
     color: var(--text-color);
     background: var(--bg-color);
 
+}
+
+/* -----footer------------ */
+footer {
+    position: relative;
+    width: 84.2%;
+    /* width: 90%;
+    padding-left:8% ; 
+    padding-right:8%; */
+    height: auto;
+    padding: 50px 100px;
+    background: #898080;
+}
+
+footer .footer_container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+footer .footer_container .second h2{
+    position: relative;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+footer .footer_container .second h2:hover {
+    color: var(--life-color);
+}
+
+footer .footer_container .second h2 span{
+    color: var(--life-color);
+    font-size: 32px;
+}
+
+footer .footer_container .second p{
+    color: hsl(0, 0%, 91%);
+    
+}
+
+footer .footer_container .foo_emoji{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+}
+
+footer .footer_container .foo_emoji li {
+    list-style: none;
+
+}
+footer .footer_container .foo_emoji li a{
+    display: grid;
+    width: 36px;
+    height: 36px;
+    background: var(--bg-color);
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer .footer_container .foo_emoji li a:hover {
+    background: var(--life-color);
+}
+
+footer .footer_container .foo_emoji li a i{
+    color: #fff;
+    font-size: 20px;
+}
+
+footer .footer_container .linking {
+    position: relative;
+
+}
+
+footer .footer_container .linking ul li{
+    list-style: none;
+
+}
+
+footer .footer_container .linking ul li a{
+    color: hsl(0, 0%, 91%);
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+footer .footer_container .ressource .contact-info{
+    position: relative;
+
+}
+
+footer .footer_container .ressource .contact-info li{
+    display: grid;
+    grid-template-columns: 30px 1fr ;
+    margin-bottom: 16px;
+}
+
+footer .footer_container .ressource .contact-info li span{
+    color: hsl(0, 0%, 91%);
+    font-size: 20px;
+}
+
+footer .footer_container .ressource .contact-info li span:hover{
+    color: var(--life-color);
+}
+
+footer .footer_container .ressource .contact-info li a{
+    color: hsl(0, 0%, 91%);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.copyright {
+    background: var(--bg-color);
+    padding: 10px;
+    text-align: center;
+    color: var(--text-color);
 }
