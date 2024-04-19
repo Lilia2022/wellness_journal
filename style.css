@@ -897,3 +897,8 @@ footer .footer_container .ressource .contact-info li a{
     text-align: center;
     color: var(--text-color);
 }
+
+/* -----responsive footer--------- */
+@media (max-width: 940px){
+    
+}
