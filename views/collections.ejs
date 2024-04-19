@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class="container">
+        <% user.Journals.forEach(function(J){ %>
+        <div class="card">
+          <div class="border"></div>
+          <div class="avatar">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/199526/jonsnow.jpg" alt="" />
+          </div>
+          <hr />
+          <div class="stats">
+            <h2><%= J.title %></h2>
+            <hr />
+            <div>
+              <p>Height: 6'0"</p>
+              <p>Weight: 180lbs</p>
+              <p>Location: Castle Black</p>
+              <blockquote>
+                <%= J.content %>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    <!-- <div class="container">
+        <div class="cards flex">
+            <% user.Journals.forEach(function(J){ %>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                    <h5 class="card-title">
+                        <%= J.content %>
+                    </h5>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    
+    </div> -->
+</body>
+</html>

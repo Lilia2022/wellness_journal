@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="/images/logo.png" class="logo">
+            <nav>
+                <ul id="menuList">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/calendar">Calendar</a></li>
+                    <li><a href="/journal">Journal</a></li>
+                    <li><a href="/mood">Mood</a></li>
+                    <li><a href="/settings">Settings</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/logout">LogOut</a></li>
+                </ul>
+            </nav>
+            <img src="/images/menu.jpg" class="menu-icon" onclick="togglemenu()">
+        </div>
+        <div id="wrapper">
+            <div id="note-editor">
+                <form action="/upload" method="post">
+                    <h2 id="note-editor-title">Create Note</h2>
+                    <label>Title:</label>
+                    <input type="text" id="title" name="title"/>
+                    <label>Description:</label>
+                    <textarea rows="10" cols="42" id="message" name="content"></textarea>
+                    <div id="button">
+                    <button id="add-btn">Create Note</button>
+                    <div id="error"></div>
+                </form>
+            </div>
+        </div>
+        <div class="cardss">
+            <% user.Journals.forEach(function(J){ %>
+                <div class="card">
+                  <div class="border"></div>
+                  <div class="avatar">
+                    <img src="/images/upload/<%= user.image %>" alt="" />
+                  </div>
+                  <hr />
+                  <div class="stats">
+                    <h2><%= J.title %></h2>
+                    <hr />
+                    <div>
+                      <!-- <p>Height: 6'0"</p>
+                      <p>Weight: 180lbs</p>
+                      <p>Location: Castle Black</p> -->
+                      <blockquote>
+                        <%= J.content %>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+                <% }) %>
+        </div>
+    </div>
+    </body>
+
+        <script src="/javascripts/script.js"></script>
+</body>
+</html>

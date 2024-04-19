@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="/images/logo.png" class="logo">
+            <nav>
+                <ul id="menuList">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/calendar">Calendar</a></li>
+                    <li><a href="/journal">Journal</a></li>
+                    <li><a href="/mood">Mood</a></li>
+                    <li><a href="/settings">Settings</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/logout">LogOut</a></li>
+                </ul>
+            </nav>
+            <img src="/images/menu.jpg" class="menu-icon" onclick="togglemenu()">
+        </div>
+        <div class="mood-title">
+            <h1>Record your mood to understand yourself better!</h1>
+            <p class="use">
+                Simply scroll the slider to select the emoji that 
+                best represents your mood. It's an easy and intuitive 
+                way to track your emotions and progress towards your goals.
+                And click on SAVE.
+            </p>
+        </div>
+        
+        <div class="container_mood">
+            <!-- anxiety -->
+            <div class="wrapper_emoji">
+                <div class="mood">
+                    <p>Anxiety</p>
+                </div>
+                <div class="section">
+                    <div class="emojis">   <!-------emoji for each section-->
+                        <li class="slide-icon"><img src="/images/anxiety/emoji-1-a.png" alt="angry"></li>
+                        <li class="slide-icon"><img src="/images/anxiety/emoji-2-a.png" alt="boring"></li>
+                        <li class="slide-icon"><img src="/images/anxiety/emoji-3-a.png" alt="soso"></li>
+                        <li class="slide-icon"><img src="/images/anxiety/emoji-4-a.png" alt="happy"></li>
+                        <li class="slide-icon"><img src="/images/anxiety/emoji-5-a.png" alt="very happy"></li>
+                    </div>
+                </div>
+
+                <div class="slider">
+                    <div class="thumb"><span></span></div>
+                    <div class="progress-bar"></div>
+                    <input id="scale_input" type="range" min="0" max="100" value="0" >
+                </div>
+            </div>
+
+                    <!-- mood -->
+            <div class="wrapper_emoji">
+                <div class="mood">
+                    <p>Feeling</p>
+                </div>
+                <div class="section">
+                    <div class="emojis">   <!-------emoji for each section-->
+                        <!-- <li class="slide-icon"><img src="media/emoji-0.png" alt="sad"></li> -->
+                        <li class="slide-icon"><img src="/images/mood/emoji-1.png" alt="angry"></li>
+                        <li class="slide-icon"><img src="/images/mood/emoji-2.png" alt="boring"></li>
+                        <li class="slide-icon"><img src="/images/mood/emoji-3.png" alt="soso"></li>
+                        <li class="slide-icon"><img src="/images/mood/emoji-4.png" alt="happy"></li>
+                        <li class="slide-icon"><img src="/images/mood/emoji-5.png" alt="very happy"></li>
+                    </div>
+                </div>
+            
+                <div class="slider">
+                    <div class="thumb"><span></span></div>
+                    <div class="progress-bar"></div>
+                    <input id="scale_input" type="range" min="0" max="100" value="0" >
+                </div>
+            </div>
+
+            <!-- power-->
+            <div class="wrapper_emoji">
+                <div class="mood">
+                    <p>Power</p>
+                </div>
+                <div class="section">
+                    <div class="emojis">   <!-------emoji for each section-->
+                        <li class="slide-icon"><img src="/images/power/power-2.png" alt="weak"></li>
+                        <li class="slide-icon"><img src="/images/power/power-3.png" alt="soso"></li>
+                        <li class="slide-icon"><img src="/images/power/power-1.png" alt="very weak"></li>
+                        <li class="slide-icon"><img src="/images/power/power-4.png" alt="strong"></li>
+                        <li class="slide-icon"><img src="/images/power/power-5.png" alt="powerful"></li>
+                    </div>
+                </div>
+                            
+                <div class="slider">
+                    <div class="thumb"><span></span></div>
+                    <div class="progress-bar"></div>
+                    <input id="scale_input" type="range" min="0" max="100" value="0" >
+                </div>
+            </div>
+
+        </div>
+        <div class="mood-record">
+            <button>SAVE TO CALENDAR</button>   
+        </div>
+    </div>
+
+    <script>
+        const wrappers = document.querySelectorAll(".wrapper_emoji");
+
+        wrappers.forEach((wrapper, index) => {
+            const slider = wrapper.querySelector("#scale_input");
+            const bar = wrapper.querySelector(".progress-bar");
+            const thumb = wrapper.querySelector(".thumb");
+            const slideIcon = wrapper.querySelector(".emojis");
+
+            // Inside the slider.oninput event listener
+            slider.oninput = () => {
+                let val = slider.value;
+                thumb.style.left = val + '%';
+                bar.style.width = val + '%';
+                slideIcon.style.marginTop = `-${150 * Math.floor(val / 20)}px`;
+
+                let anxietyDescription = '';
+                let feelingDescription = '';
+                let powerDescription = '';
+
+                // Determine anxiety description based on the selected emoji
+                if (val < 20) {
+                    anxietyDescription = "You are very anxious.";
+                } else if (val < 40) {
+                    anxietyDescription = "You are bored.";
+                } else if (val < 60) {
+                    anxietyDescription = "You are a little bit calm.";
+                } else if (val < 80) {
+                    anxietyDescription = "You are cool.";
+                } else {
+                    anxietyDescription = "You are peaceful.";
+                }
+
+                // Determine feeling description based on the selected emoji
+                // Modify the conditions according to your emoji scale
+                if (val < 20) {
+                    feelingDescription = "You are angry.";
+                } else if (val < 40) {
+                    feelingDescription = "You are feeling upset.";
+                } else if (val < 60) {
+                    feelingDescription = "Not bad feeling.";
+                } else if (val < 80) {
+                    feelingDescription = "You are OK.";
+                } else {
+                    feelingDescription = "You are so lovely today.";
+                }
+
+                // Determine power description based on the selected emoji
+                // Modify the conditions according to your emoji scale
+                if (val < 20) {
+                    powerDescription = "You are yawning.";
+                } else if (val < 40) {
+                    powerDescription = "You are weak.";
+                } else if (val < 60) {
+                    powerDescription = "You are tired.";
+                } else if (val < 80) {
+                    powerDescription = "You are strong.";
+                } else {
+                    powerDescription = "You are powerful.";
+                }
+
+                // Store selected mood descriptions in localStorage
+                localStorage.setItem('anxietyDescription', anxietyDescription);
+                localStorage.setItem('feelingDescription', feelingDescription);
+                localStorage.setItem('powerDescription', powerDescription);
+            
+            };
+        });
+
+    </script>
+   
+</body>
+</html>

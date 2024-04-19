@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="/images/logo.png" class="logo">
+            <nav>
+                <ul id="menuList">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/Register">Register</a></li>
+                    <li><a href="/calendar">Calendar</a></li>
+                    <li><a href="/journal">Journal</a></li>
+                    <li><a href="/mood">Mood</a></li>
+                    <li><a href="/settings">Settings</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/logout">LogOut</a></li>
+                </ul>
+            </nav>
+            <img src="/images/menu.jpg" class="menu-icon" onclick="togglemenu()">
+        </div>
+        <div class="login-register">
+            <form action="/Register" method="post" class="login-form">
+                <h1 class="login-title">Registration</h1>
+        
+                <div class="input-box">
+                    <i class='bx bxs-user'></i>
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-box">
+                    <i class='bx bxs-user'></i>
+                    <input type="text" name="fullname" placeholder="Full Name" required>
+                </div>
+                <div class="input-box">
+                    <i class='bx bxs-user'></i>
+                    <input type="text" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-box">
+                    <i class='bx bxs-lock-alt'></i>
+                    <input type="password" name="password" placeholder="Create password" required>
+                </div>
+        
+        
+                <button class="login-btn">Register</a></button>
+        
+                <p class="register">
+                    Already have an account
+                    <a href="/login">Login</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script src="/javascripts/script.js"></script>
+</body>
+</html>
